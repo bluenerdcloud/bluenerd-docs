@@ -33,9 +33,11 @@ jobs:
       - name: Render PlantUML Diagrams
         run: |
           mkdir -p docs/rendered
-          echo "Rendering the following files:"
-          find docs -name "*.puml"
-          find docs -name "*.puml" -exec java -jar plantuml.jar -tpng {} -o docs/rendered \;
+          echo "Rendering all PUML files to docs/rendered/"
+          for f in $(find docs -name "*.puml"); do
+            echo "Rendering $f..."
+            java -jar plantuml.jar -tpng "$f" -o docs/rendered
+          done
           echo "Contents of docs/rendered:"
           ls -l docs/rendered
 
