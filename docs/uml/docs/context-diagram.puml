@@ -1,0 +1,18 @@
+@startuml SoftwareKitchenContext
+
+title Software Kitchen – Context Diagram
+
+actor "End User\n(Diner)" as EndUser
+actor "Guest Chef\n(Developer)" as Chef
+
+rectangle "Software Kitchen\nPlatform" as SK {
+  [Kitchen Tools\n(Templates, CI, Libraries)] as Tools
+  [Deployment Infra\n(AWS, GitHub Actions)] as Infra
+}
+
+EndUser --> SK : Requests solution
+Chef --> SK : Builds solutions
+Chef --> Tools : Uses
+SK --> Infra : Deploys to
+
+@enduml

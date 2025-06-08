@@ -1,0 +1,29 @@
+name: Render PlantUML Diagrams
+
+on:
+  push:
+    paths:
+      - 'docs/**/*.puml'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up PlantUML
+        uses: ts-graphviz/setup-plantuml@v1
+
+      - name: Render Diagrams
+        run: |
+          mkdir -p docs/rendered
+          for f in docs/**/*.puml; do
+            plantuml -tpng "$f" -o ./rendered
+          done
+
+      - name: Upload Rendered Diagrams
+        uses: actions/upload-artifact@v3
+        with:
+          name: rendered-diagrams
+          path: docs/rendered
