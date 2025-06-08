@@ -3,7 +3,7 @@ name: Render PlantUML Diagrams
 on:
   push:
     paths:
-      - 'uml/**/*.puml'
+      - 'docs/**/*.puml'
 
 jobs:
   render:
