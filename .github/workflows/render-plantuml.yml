@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'docs/**/*.puml'
+  workflow_dispatch:  # allows manual run from Actions tab
 
 jobs:
   render:
@@ -13,26 +14,27 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Java (for PlantUML)
+      - name: Set up Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
       - name: Install Graphviz
-        run: sudo apt-get update && sudo apt-get install -y graphviz
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y graphviz
 
       - name: Download PlantUML Jar
         run: |
-          curl -o plantuml.jar https://github.com/plantuml/plantuml/releases/latest/download/plantuml-1.2024.4.jar
+            curl -L -o plantuml.jar https://downloads.plantuml.com/plantuml-1.2024.4.jar
 
-      - name: Render Diagrams
+      - name: Render PlantUML Diagrams
         run: |
           mkdir -p docs/rendered
-          find docs -name "*.puml" -exec java -jar plantuml.jar -tpng {} -o rendered \;
+          find docs -name "*.puml" -exec java -jar plantuml.jar -tpng {} -o docs/rendered \;
 
       - name: Upload Rendered Diagrams
         uses: actions/upload-artifact@v4
         with:
-          name: rendered-diagrams
-          path: docs/rendered
+          name:
