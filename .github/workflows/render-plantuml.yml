@@ -27,7 +27,7 @@ jobs:
 
       - name: Download PlantUML Jar
         run: |
-            curl -L -o plantuml.jar https://downloads.plantuml.com/plantuml-1.2024.4.jar
+            curl -L -o plantuml.jar  https://github.com/plantuml/plantuml/releases/download/v1.2024.4/plantuml-1.2024.4.jar
 
       - name: Render PlantUML Diagrams
         run: |
