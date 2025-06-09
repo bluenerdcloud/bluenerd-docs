@@ -34,7 +34,7 @@ In this context:
 - End Users act as early testers, providing input on usability and value.
 - The Software Kitchen platform ties it all together with tools, workflows, and hosting infrastructure.
 - This isn’t about mass production — it’s about innovation, iteration, and learning.
-
+![Software Kitchen Context ](./docs/uml/software-kitchen-vs-aws.png)
 ---
 
 ## 🏭 How Does It Relate to AWS?
@@ -49,7 +49,7 @@ The Software Kitchen is your **test kitchen** built on top of it:
 | Secure handling of API keys and secrets    | Requires deep IAM and SSM knowledge                         |
 | Pre-integrated Lambda + RDS + S3           | Raw infrastructure and service endpoints                    |
 
-![Software Kitchen vs AWS](./docs/images/software-kitchen-vs-aws.png)
+![Software Kitchen vs AWS](./docs/images/SoftwareKitchenTestKitchenContext.png)
 
 ---
 
