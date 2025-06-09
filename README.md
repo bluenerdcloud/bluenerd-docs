@@ -18,6 +18,25 @@ No need to learn IAM, VPCs, or CI/CD. Just pick a kit, add your ingredients, and
 
 ---
 
+🧪 Software Kitchen – Context Diagram
+The Software Kitchen is a test kitchen for software ideas. It’s a space where developers — called Guest Chefs — experiment with new “recipes” (prototypes, tools, utilities), get early feedback from End Users, and refine their creations before serving them at scale.
+
+This model supports:
+
+- Rapid prototyping of software solutions
+- Close collaboration between builders and real users
+- Iteration based on real-world feedback
+- Deployment using cloud-native infrastructure (AWS, GitHub Actions, etc.)
+
+In this context:
+
+- Guest Chefs use provided ingredients (frameworks, templates, CI/CD pipelines) to craft new solutions.
+- End Users act as early testers, providing input on usability and value.
+- The Software Kitchen platform ties it all together with tools, workflows, and hosting infrastructure.
+- This isn’t about mass production — it’s about innovation, iteration, and learning.
+
+---
+
 ## 🏭 How Does It Relate to AWS?
 
 Think of AWS as the **industrial cloud warehouse**—powerful but overwhelming.  
