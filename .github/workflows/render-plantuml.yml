@@ -30,15 +30,18 @@ jobs:
           curl -L -o plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2024.4/plantuml-1.2024.4.jar
           file plantuml.jar
 
-      - name: Render PlantUML Diagrams (Debug Mode)
+      - name: Render PlantUML Diagrams
         run: |
-            echo "Rendering .puml files (DEBUG MODE)"
+            mkdir -p docs/rendered
+            echo "Rendering .puml files into same folder, then moving PNGs to docs/rendered/"
             for f in $(find docs -name "*.puml"); do
             echo "Rendering $f..."
             java -jar plantuml.jar -tpng "$f"
             done
-            echo "Searching for PNG output:"
-            find docs -name "*.png" -exec ls -l {} \;
+            echo "Moving rendered PNGs to docs/rendered/"
+            find docs -name "*.png" -exec mv {} docs/rendered/ \;
+            echo "Final PNGs:"
+            ls -l docs/rendered
 
 
       - name: Upload Rendered Diagrams
