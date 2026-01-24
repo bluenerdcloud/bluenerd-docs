@@ -1,0 +1,15 @@
+{"labels":[],"number":28,"title":"#28 — Error handling \u0026 retry/backoff for Google Ads API"}
+{"labels":[],"number":27,"title":"#27 — Provisioning status + self-test"}
+{"labels":[],"number":26,"title":"#26 — Attach/Detach Lead Form Asset to Campaigns (multi-campaign support)"}
+{"labels":[],"number":25,"title":"#25 — Create/Update Lead Form Asset via Google Ads API (set Webhook URL + Key)"}
+{"labels":[],"number":24,"title":"#24 — Generate per-tenant webhook URL \u0026 secret"}
+{"labels":[],"number":23,"title":"#23 — Subscriber OAuth to Google Ads (get refresh_token + customer_id)"}
+{"labels":[],"number":22,"title":"Story P1-4 — LeadsScreen auto-refresh (polling)"}
+{"labels":[],"number":21,"title":"Story P1-3 — DB columns sanity pass (tiny migration)"}
+{"labels":[],"number":20,"title":"Story P1-2 — Public submit endpoint (POST /leads/public) + form POST"}
+{"labels":[],"number":19,"title":"Story P1-1 — Homepage form (public): controlled inputs + attribution (no POST)"}
+{"labels":[],"number":17,"title":"Story P0-2 — Wire LeadsScreen.jsx to GET /leads"}
+{"labels":[],"number":16,"title":"Story P0-1 — GET /leads (read-only) → show DB rows on LeadsScreen"}
+{"labels":[],"number":14,"title":"Enable stable DBeaver access to RDS without relying on home IP"}
+{"labels":[],"number":13,"title":"Convert manual prototype to Terraform"}
+{"labels":[],"number":5,"title":"Create Infrastructure README for DEV Environment: infra-readme #5"}
